@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css?family=Basic');
+
+body, HTML {
+  margin: 0;
+  padding: 0;
+  
+  transition: all 100ms ease-in-out;
+  *:not(i) {
+    font-family: 'Basic', sans-serif;
+  }
+}
+
+.vl {
+  border-left: 1px solid #b88b57;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.website-container {
+
+  &.navigation-open {
+    .navigation {
+      transition: all .5s ease-in-out;
+      transform: translateX(0);
+    }
+    .content {
+      transition: all .5s ease-in-out;
+      margin-left: 350px;
+    }
+  }
+
+  .navigation {
+    background-color: #232628;
+    width: 350px;
+    transform: translateX(-350px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.33);
+    z-index: 1;
+
+    .logo {
+      padding: 0 40px;
+      max-width: 100%;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      img {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .brand {
+        font-size: 32px;
+        color: white;
+      }
+    }
+
+    .links {
+      max-width: 100%;
+
+      ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: center;
+        
+        li {
+          text-align: center;
+          margin-top: 5px;
+          a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            
+            &:hover {
+              color: darken(#b88b57, 20%);
+            }
+          }
+          &.active {
+            a {
+              transition: all .2s ease-in-out;
+              border-left: 1px solid white;
+              padding-left: 10px;
+              border-right: 1px solid white;
+              padding-right: 10px;
+              color: #b88b57;
+            }
+          }
+        }
+      }
+    }
+
+    .social-links {
+      text-align: left;
+      max-width: 100%;
+      
+      .social-icons {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+
+        li {
+          display: inline-block;
+          margin-right: 5px;
+
+          a {
+            text-decoration: none;
+            color: #b88b57;
+            font-size: 16px;
+
+            &:hover {
+              transition: all .2s ease-in-out;
+              color: white;
+              text-decoration: overline;
+              text-decoration-color: #b88b57;
+            }
+          }
+        }
+      }
+    }
+
+    .footer {
+      max-width: 100%;
+      color: white;
+    }
+  }
+
+  .content {
+    margin-left: 0;
+
+    .section {
+      z-index: 0;
+    }
+
+    .add-background-texture {
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: .05;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: url('/assets/texture-stone.jpg') 50% 50% no-repeat;
+    }
+
+    .card.black-card {
+      margin: 0 auto;
+      width: 90%;
+      background-color: #232628;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.33);
+      padding: 20px;
+      h1 {
+        color: #b88b57;
+      }
+      h2 {
+        color: white;
+      }
+    }
+
+    .btn-brown {
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      width: 100%;
+      max-width: 386px;
+      height: 48px;
+      font-size: 18px;
+      background-color: #b88b57;
+      color: white;
+
+      &:hover {
+        background-color: darken(#b88b57, 20%);
+        cursor: pointer;
+      }
+    }
+
+    .page-welcome {
+      background: url('/assets/industrial.JPG') 50% 50% no-repeat;
+      background-size: cover;
+      position: relative;
+      .card {
+        animation-delay: .2s;
+        width: 50%;
+        position: absolute;
+        top: 40%;
+        right: 100px;
+        transform: translateY(-50%);
+        background-color: #232628;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.33);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          color: #b88b57;
+        }
+        h2 {
+          color: white;
+        }
+        a {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .page-about {
+      background: url('/assets/zunaj.JPG') 50% 50% no-repeat;
+      background-size: cover;
+      position: relative;
+      .fp-tableCell {
+        display: flex;
+        align-items: flex-end;
+      }
+      .card {
+        animation-delay: .2s;
+        margin: 0 auto 50px;
+        width: 90%;
+        background-color: #232628;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.33);
+        padding: 20px;
+        h1 {
+          color: #b88b57;
+        }
+        h2 {
+          color: white;
+        }
+      }
+    }
+
+    .page-products {
+
+      .height-container {
+        max-height: 75vh;
+      }
+      #peskanje {
+        animation-delay: 1.1s;
+      }
+      #spomeniki {
+        animation-delay: 1.2s;
+      }
+      #klesanje {
+        animation-delay: 1.3s;
+      }
+      #crke {
+        animation-delay: 1.4s;
+      }
+
+      padding-left: 50px;
+      padding-right: 50px;
+      background-color: #171717;
+      h2 {
+        color: white;
+      }
+      .row {
+        margin-bottom: 30px;
+        .card {
+          height: 30vh;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          
+          .card-title {
+            padding: 10px;
+            font-size: 32px;
+            align-self: flex-end;
+            color: white;
+            z-index: 1;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.33);
+            width: 100%;
+          }
+
+          .bg {
+            top:0;
+            left: -30px;
+            right:0;
+            bottom:0;
+            z-index: 0;
+            position: absolute;
+            width: calc(100% + 30px);
+            transition: all .2s ease-in-out;
+
+            &:hover {
+              left: 0;
+              opacity: .4;
+              cursor: pointer;
+            }
+          }
+
+          &#unikat .bg {
+            background: url('assets/vaza.JPG') 50% 50% no-repeat;
+            background-size: cover;
+          }
+
+          &#spomeniki .bg {
+            background: url('assets/spomenik1.JPG') 50% 50% no-repeat;
+            background-size: cover;
+          }
+
+          &#obelezja .bg {
+            background: url('assets/obelezje2.JPG') 50% 50% no-repeat;
+            background-size: cover;
+          }
+
+          &#crke .bg {
+            background: url('assets/crke-kovinske.JPG') 50% 50% no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+
+    .page-otherproducts {
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: darken(#b88b57, 30%);
+
+      .idejno {
+        color: white;
+        font-size: 20px;
+        margin: 0 auto 10px;
+        display: table;
+      }
+
+      .to-contact-button {
+        display: table;
+        margin: 0 auto;
+      }
+
+      h2 {
+        margin-left: 5%;
+        font-size: 45px;
+        color: white;
+      }
+      .row {
+        margin-bottom: 30px;
+        .card {
+          height: 40vh;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+
+          .card-title {
+            padding: 10px;
+            font-size: 32px;
+            align-self: flex-end;
+            color: white;
+            z-index: 1;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.33);
+            width: 100%;
+          }
+
+          .bg {
+            top:0;
+            left: -30px;
+            right:0;
+            bottom:0;
+            position: absolute;
+            width: calc(100% + 30px);
+            transition: all .2s ease-in-out;
+
+            &:hover {
+              left: 0;
+              opacity: .4;
+              cursor: pointer;
+            }
+          }
+
+          &#peskanje .bg {
+            background: url('assets/peskanje.JPG') 50% 50% no-repeat;
+            background-size: cover;
+          }
+
+          &#klesanje .bg {
+            background: url('assets/klesanje.jpg') 50% 50% no-repeat;
+            background-size: cover;
+          }
+          
+        }
+      }
+    }
+
+    .page-kontakt {
+      background-color: #171717;
+      padding: 50px;
+      h2 {
+        color: white;
+        margin-bottom: 10px;
+      }
+      #map {
+        height: 500px;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .bottom-card {
+        width: 100%;
+        padding: 1px 20px 20px;
+      }
+      .details-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .location, .phone, .mail {
+          white-space: nowrap;
+          color: white;
+          font-size: 20px;
+          i {
+            width: 25px;
+            color: #b88b57;
+          }
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.33);
+
+  .modal-card {
+    width: 60vw;
+    max-height: 50vh;
+    background-color: #181818;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.33);
+    padding: 20px;
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.33);
+      padding: 5px 10px;
+      .modal-title {
+        font-size: 32px;
+        color: #b88b57;
+      }
+      i {
+        font-size: 32px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          color: darken(white, 20%);
+        }
+      }
+    }
+    .modal-content {
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+
+      .galerija {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        img {
+          cursor: pointer;
+          width: 100%;
+          max-height: 200px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &.modal-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

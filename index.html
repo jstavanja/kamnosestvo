@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kamnoseštvo Klančar Postojna</title>
+  <link rel="stylesheet/less" type="text/css" href="index.less">
+  <script>
+    less = {
+      env: "development",
+      async: false,
+      fileAsync: false,
+      poll: 1000,
+      functions: {},
+      dumpLineNumbers: "comments",
+      relativeUrls: false
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="jquery.fullPage.min.js"></script>
+  <script src="pace.min.js"></script>
+  <link rel="stylesheet" href="pace-theme-corner-indicator.css">
+  <link rel="stylesheet" href="grid12.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <link rel="shortcut icon" href="assets/new_logo.png" type="image/png">
+  
+  <link type="text/css" rel="stylesheet" href="gallery/css/lightgallery.css" /> 
+  <script src="gallery/js/lightgallery.js"></script>
+  <script src="gallery/js/lg-thumbnail.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(() => {
+      lightGallery(document.getElementById('lightgallery'), {
+        selector: '.kontejnr'
+      })
+    }, 1000); 
+  </script>
+
+  <script src="index.js"></script>
+</head>
+<body>
+  <div class="website-container">
+
+    <header class="navigation">
+      <div class="logo animated fadeInUp">
+        <div class="vl"></div>
+        <img src="assets/new_logo.png" alt="logo of company">
+        <div class="brand">Kamnoseštvo Klančar</div>
+      </div>
+
+      <div class="links animated fadeIn">
+        
+        <ul id="menu">
+          <li data-menuanchor="page1"><a href="#page1">Domov</a></li>
+          <li data-menuanchor="page2"><a href="#page2">O nas</a></li>
+          <li data-menuanchor="page3"><a href="#page3">Izdelki in storitve</a></li>
+          <li data-menuanchor="page4"><a href="#page4">Ostala ponudba</a></li>
+          <li data-menuanchor="page5"><a href="#page5">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="social-links animated fadeIn">
+        <ul class="social-icons">
+          <li><a href="https://www.informacija.net/podjetja/gradnja/kamnosestvo/kamnosestvo-klancar">informacija</a></li>
+          <li><a href="https://www.google.si/maps/dir/''/kamnosestvo+klancar/@45.7733038,14.1498791,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x477b31f90d8599e5:0x872fd7c81636a10f!2m2!1d14.2199189!2d45.7733252">gps</a></li>
+        </ul>
+      </div>
+
+      <section class="footer animated fadeIn">
+        2018, Jaka S.
+      </section>
+
+    </header>
+
+    <div class="content">
+      <div id="fullpage">
+        <div class="section page-welcome">
+          <div class="card animated">
+            <h1 class="title">
+              Dobrodošli!
+            </h1>
+            <a data-menuanchor="page2" href="#page2"><button class="next-page btn-brown">O nas ></button></a>
+          </div>
+        </div>
+        <div class="section page-about">
+          <div class="card animated">
+            <h1 class="title">
+              Nekaj o nas.
+            </h1>
+            <h2 class="subtitle">
+              Smo podjetje z več kot 40-letno tradicijo in za seboj imamo že na stotine izdelanih, postavljenih in obnovljenih spomenikov.
+            </h2>
+            <div class="row">
+              <div class="col-md-4">
+                <button class="btn-brown" onclick="openModal('#modal-onas')">Več slik</button>    
+              </div>
+              <div class="col-md-4">
+                <a data-menuanchor="page3" href="#page3"><button class="next-page btn-brown">Oglejte si ponudbo ></button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section page-products container">
+          <div class="height-container">
+            <div class="add-background-texture"></div>
+            <h2>Kot se za kamnoseštvo s tradicijo spodobi, vam izdelamo mnogo različnih kvalitetnih izdelkov. Nekaj najpopularnejših med Vami je zbranih tukaj:</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card" id="unikat" onclick="openModal('#modal-unikat')">
+                  <div class="bg"></div>
+                  <div class="card-title">Unikatni izdelki</div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card animated fadeInUp" id="spomeniki" onclick="openModal('#modal-spomeniki')">
+                  <div class="bg"></div>
+                  <div class="card-title">Spomeniki</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="card" id="obelezja" onclick="openModal('#modal-obelezja')">
+                  <div class="bg"></div>
+                  <div class="card-title">Spominska obeležja</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card animated fadeInUp" id="crke" onclick="openModal('#modal-crke')">
+                  <div class="bg"></div>
+                  <div class="card-title">Črke</div>
+                </div>
+              </div>
+            </div>
+            <a data-menuanchor="page4" href="#page4"><button class="next-page btn-brown">Naprej ></button></a>
+          </div>
+        </div>
+        <div class="section page-otherproducts">
+          <div class="add-background-texture"></div>
+          <h2>Poleg že naštetih stvari vam nudimo še ostale vrhunske storitve:</h2>
+          <div class="card black-card">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card animated fadeInUp" id="peskanje" onclick="openModal('#modal-peskanje')">
+                  <div class="bg"></div>
+                  <div class="card-title">Peskanje</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card animated fadeInUp" id="klesanje" onclick="openModal('#modal-klesanje')">
+                  <div class="bg"></div>
+                  <div class="card-title">Klesanje</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="idejno">... lahko pa Vam spomenik zasnujemo samo idejno.</div>
+              <a class="to-contact-button" data-menuanchor="page5" href="#page5"><button class="next-page btn-brown">Kontaktirajte nas ></button></a>
+            </div>
+          </div>
+        </div>
+        <div class="section page-kontakt">
+          <div class="add-background-texture"></div>
+          <h2>Lokacija</h2>
+          <div id="map"></div>
+
+          <div class="card black-card bottom-card">
+            <h2>Ostali podatki:</h2>
+            <div class="details-row">
+              <div class="location">
+                <i class="fas fa-wrench"></i> Kamnoseštvo Klančar<br>
+                <i class="fas fa-home"></i> Pod kolodvorom 1<br>
+                <i class="fas fa-building"></i> 6230 Postojna<br>
+              </div>
+    
+              <div class="phone">
+                <i class="fas fa-phone"></i>041/864-077
+              </div>
+    
+              <div class="mail">
+                <i class="fas fa-envelope"></i><a href="mailto:kamnosestvo.klancar@siol.net">kamnosestvo.klancar@siol.net</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal PESKANJE -->
+    <div class="modal" id="modal-peskanje">
+      <div class="modal-card animated fadeIn">
+        <div class="modal-header">
+          <div class="modal-title">Peskanje napisov in raznih motivov</div>
+          <i class="fas fa-times close-modal"></i>
+        </div>
+        <div class="modal-content">S pomočjo peskalnih strojev omogočamo strojno natančno gravuro napisov in ostalih motivov, kot so križi, rože in podobno.</div>
+      </div>
+    </div>
+
+    <!-- modal SPOMENIKI -->
+    <div class="modal" id="modal-spomeniki">
+      <div class="modal-card animated fadeIn">
+        <div class="modal-header">
+          <div class="modal-title">Izdelava, obnavljanje, vzdrževanje nagrobnih spomenikov</div>
+          <i class="fas fa-times close-modal"></i>
+        </div>
+        <div class="modal-content">Iz najboljših materialov vam izdelamo kompletni nagrobni spomenik, ki vsebuje tako napisno ploščo, kot pokrivno ploščo in robnike in še marsikaj.
+            Poleg tega vam lahko naš ali pa nagrobnik izdelan s strani koga drugega tudi vzdržujemo ali obnovimo.</div>
+      </div>
+    </div>
+
+    <!-- modal KLESANJE -->
+    <div class="modal" id="modal-klesanje">
+      <div class="modal-card animated fadeIn">
+        <div class="modal-header">
+          <div class="modal-title">Ročno klesanje v kamen, granit, marmor</div>
+          <i class="fas fa-times close-modal"></i>
+        </div>
+        <div class="modal-content">Poleg strojnega izreza in gravure črk vam ponujamo tudi zelo kvalitetno ročno klesanje v kamen s pomočjo dleta, kar je v tej obrti dandanes že prava redkost.</div>
+      </div>
+    </div>
+
+    <!-- modal CRKE -->
+    <div class="modal" id="modal-crke">
+      <div class="modal-card animated fadeIn">
+        <div class="modal-header">
+          <div class="modal-title">Barvanje, zlačenje črk ali montaža kovinskih črk (inox, bronastih …)</div>
+          <i class="fas fa-times close-modal"></i>
+        </div>
+        <div class="modal-content">Klesane ali peskane črke vam lahko tudi pozlatimo ali pa pobarvamo. Če pa se ne odločite za gravuro oziroma peskanje, vam ponujamo tudi montažo različnih kovinskih črk.</div>
+      </div>
+    </div>
+
+    <!-- modal UNIKAT -->
+    <div class="modal" id="modal-unikat">
+      <div class="modal-card animated fadeIn">
+        <div class="modal-header">
+          <div class="modal-title">Izdelava unikatnih izdelkov iz kamna, granita, marmorja</div>
+          <i class="fas fa-times close-modal"></i>
+        </div>
+        <div class="modal-content">Za vaš nagrobnik lahko izdelamo tudi vaze, stojala za nagrobne sveče in še marsikaj drugega.</div>
+      </div>
+    </div>
+
+    <!-- modal OBELEZJA -->
+    <div class="modal" id="modal-obelezja">
+      <div class="modal-card animated fadeIn">
+        <div class="modal-header">
+          <div class="modal-title">Izdelava spominskih plošč in obeležij</div>
+          <i class="fas fa-times close-modal"></i>
+        </div>
+        <div class="modal-content">Obnavljamo in izdelujemo tudi napise in plošče za spominska obeležja, kot je na primer spomenik Miroslavu Vilharju pred Osnovno šolo Miroslava Vilharja v Postojni.</div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-onas">
+      <div class="modal-card animated fadeIn">
+        <div class="modal-header">
+          <div class="modal-title">Kamnoseštvo Klančar</div>
+          <i class="fas fa-times close-modal"></i>
+        </div>
+        <div class="modal-content">
+          <div class="galerija row" id="lightgallery">
+            <div class="col-md-4">
+              <div class="kontejnr" data-src="assets/logo-kamjon.JPG">
+                <img src="assets/logo-kamjon.JPG" alt="" class="img-responsive">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="kontejnr" data-src="assets/tradicija.JPG">
+                <img src="assets/tradicija.JPG" alt="" class="img-responsive">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="kontejnr" data-src="assets/delavnica.JPG">
+                <img src="assets/delavnica.JPG" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtYmlKE7eCsSK1EAn7P-iOHlLtumOb9fU&callback=initMap">
+  </script>
+</body>
+</html>
